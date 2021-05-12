@@ -1,0 +1,95 @@
+osu file format v14
+
+[General]
+AudioFilename: virtual
+AudioLeadIn: 0
+PreviewTime: -1
+Countdown: 0
+SampleSet: None
+StackLeniency: 0.7
+Mode: 3
+LetterboxInBreaks: 1
+SpecialStyle: 0
+WidescreenStoryboard: 1
+
+[Editor]
+DistanceSpacing: 0.8
+BeatDivisor: 4
+GridSize: 8
+TimelineZoom: 1
+
+[Metadata]
+Title:SHARPNELSTREAMZ Selection Set 05
+TitleUnicode:SHARPNELSTREAMZ Selection Set 05
+Artist:Various Artists
+ArtistUnicode:Various Artists
+Creator:[Crz] DJ K1RA
+Version:#Marathon - Delete upon download
+Source:
+Tags:marathon
+BeatmapID:2841736
+BeatmapSetID:1373034
+
+[Difficulty]
+HPDrainRate:5
+CircleSize:4
+OverallDifficulty:8
+ApproachRate:5
+SliderMultiplier:1.4
+SliderTickRate:1
+
+[Events]
+//Background and Video events
+0,0,"cover.jpg",0,0
+//Break Periods
+2,572,586689
+//Storyboard Layer 0 (Background)
+//Storyboard Layer 1 (Fail)
+//Storyboard Layer 2 (Pass)
+//Storyboard Layer 3 (Foreground)
+//Storyboard Layer 4 (Overlay)
+//Storyboard Sound Samples
+
+[TimingPoints]
+-30,402.684563758389,4,2,1,30,1,0
+4802,-100,4,2,1,40,0,0
+11245,-100,4,2,1,40,0,0
+17688,-100,4,2,1,50,0,0
+19298,-100,4,2,1,25,0,0
+20104,-100,4,2,1,20,0,0
+20204,-100,4,2,1,25,0,0
+20305,-100,4,2,1,30,0,0
+20406,-100,4,2,1,35,0,0
+20506,-100,4,2,1,40,0,0
+20607,-100,4,2,1,45,0,0
+20708,-100,4,2,1,50,0,0
+20808,-100,4,2,1,55,0,0
+20909,-100,4,2,1,60,0,0
+33795,-100,4,2,1,40,0,0
+51513,-100,4,2,1,45,0,0
+51916,-100,4,2,1,50,0,0
+52318,-100,4,2,1,55,0,0
+53124,-100,4,2,1,60,0,0
+59567,-100,4,2,1,50,0,0
+74063,-100,4,2,1,60,0,1
+85339,-100,4,2,1,40,0,1
+86949,-100,4,2,1,60,0,1
+98225,-100,4,2,1,40,0,1
+99835,-100,4,2,1,50,0,1
+101446,-100,4,2,1,40,0,0
+101547,-100,4,2,1,10,0,0
+101647,-100,4,2,1,15,0,0
+101849,-100,4,2,1,20,0,0
+102050,-100,4,2,1,25,0,0
+102251,-100,4,2,1,30,0,0
+102453,-100,4,2,1,35,0,0
+102654,-100,4,2,1,40,0,0
+102855,-100,4,2,1,45,0,0
+103057,-100,4,2,1,50,0,0
+117151,-100,4,2,1,60,0,0
+587889,402.684563758389,4,2,1,30,1,0
+
+
+[HitObjects]
+64,192,372,5,0,0:0:0:0:
+64,192,587889,5,0,0:0:0:0:
