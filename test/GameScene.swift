@@ -158,7 +158,15 @@ class GameScene: SKScene  {
     label.fontColor = color
     self.addChild(label)
   }
-  
+  func contains(keys:[String],charaters:String)->Bool{
+    
+    for chr in charaters{
+      if keys.contains(String(chr)){
+        return true
+      }
+    }
+    return false
+  }
   
   
   //vars
@@ -189,6 +197,12 @@ class GameScene: SKScene  {
   var score:[Int]=[6]
   var lasthit:Double=0
   var songneedtostarted:Bool=true
+  
+  
+  
+  
+  
+  //can be edited
   let judge=[
     "EXCELLENT",
     "PERFECT",
@@ -197,10 +211,10 @@ class GameScene: SKScene  {
     "MISS",
     ""
   ]
-  let songselected=[6,0]
+  var songselected=[6,4]//current song you will play
   let jt = [22, 40, 90, 130, 180, 200]
   let allkeys=[[],[" "],["s","k"],["s"," ","k"],["d","c","m","k"],["a","s"," ","k","l"],["a","s","d","j","k","l"],["a","s","d"," ","j","k","l"]]
-  var keys:[String]=["a","s","d"," ","j","k","l"]//["a","s","k","l"]//["a","s","d"," ","j","k","l"]
+  var keys:[String]=["a","s","d"," ","j","k","l"]//keys
   let scroll:CGFloat=700
   let rad:CGFloat=25
   let theme:[SKColor]=[SKColor(red: 34/255, green: 116/255, blue: 165/255, alpha: 1),//"Star Command Blue"
@@ -209,10 +223,10 @@ class GameScene: SKScene  {
                        SKColor(red: 22/255, green: 193/255, blue: 255/255, alpha: 1),//"Mauve"
                        SKColor(red: 0/255, green: 204/255, blue: 102/255, alpha: 1)]//"Emerald"
   override func keyUp(with event: NSEvent) {
-    if keys.contains(event.characters!){
+    if contains(keys: keys, charaters: event.characters!) {
       let elp=(CACurrentMediaTime()*1000)-starttime
       for key in 0...keys.count-1{
-        if keys[key]==event.characters!{
+        if event.characters!.contains(keys[key]){
           held[key]=false
           light[key].removeFromParent()
           light[key]=circle(pos: CGPoint(x: lanes[key], y: juy), colorin: colors[key], rad: CGFloat(rad), wid: CGFloat(1), colorout: colorsout[2],z:1)
@@ -261,10 +275,10 @@ class GameScene: SKScene  {
     
     
     
-    if keys.contains(event.characters!){
+    if contains(keys: keys, charaters: event.characters!){
       let elp=(CACurrentMediaTime()*1000)-starttime
       for key in 0...keys.count-1{
-        if keys[key]==event.characters!{
+        if event.characters!.contains(keys[key]){
           held[key]=true
           light[key].removeFromParent()
           light[key]=circle(pos: CGPoint(x: lanes[key], y: juy), colorin: colorsout[key], rad: CGFloat(rad), wid: CGFloat(1), colorout: colorsout[2],z:1)
@@ -317,7 +331,7 @@ class GameScene: SKScene  {
         
       }
       judgetext?.alpha=5-CGFloat((elp-lasthit)/100)
-      judgetext?.fontSize=32-CGFloat((elp-lasthit)/100)
+      judgetext?.fontSize=32-CGFloat((elp-lasthit)/50)
       //scroll-----------------
       for lane in 0...song.0.count-1{
         if Double(song.0[lane][0])!<elp-200{
@@ -431,7 +445,7 @@ class GameScene: SKScene  {
   }
   override func sceneDidLoad() {
     super.sceneDidLoad()
-
+    songselected = ud.object(forKey:"selected") as! [Int] 
     let f=FileManager.default
     
     let songdir=f.homeDirectoryForCurrentUser.appendingPathComponent("Documents").appendingPathComponent("Songs")
@@ -453,7 +467,7 @@ class GameScene: SKScene  {
     judgetext?.text=""
     do{
       audioPlayer = try AVAudioPlayer(contentsOf: odir.appendingPathComponent(getsongfile(filename: osufile.path)))
-      hitplayer=try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "normal-hitnormal", ofType: "wav")!))
+//      hitplayer=try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "normal-hitnormal", ofType: "wav")!))
     }catch{
       OSErr("audio not found or smt")
     }

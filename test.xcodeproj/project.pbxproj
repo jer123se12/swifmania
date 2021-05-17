@@ -16,7 +16,9 @@
 		670A482F263661A400358DB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670A482D263661A400358DB3 /* Main.storyboard */; };
 		670A483B263661A500358DB3 /* testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A483A263661A500358DB3 /* testTests.swift */; };
 		670A4846263661A500358DB3 /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A4845263661A500358DB3 /* testUITests.swift */; };
-		671A5586264A8C0F00E4EEFB /* normal-hitnormal.wav in Resources */ = {isa = PBXBuildFile; fileRef = 671A5585264A8C0F00E4EEFB /* normal-hitnormal.wav */; };
+		671A5588264B633F00E4EEFB /* intro.sks in Resources */ = {isa = PBXBuildFile; fileRef = 671A5587264B633F00E4EEFB /* intro.sks */; };
+		671A558A264B63C300E4EEFB /* intro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A5589264B63C300E4EEFB /* intro.swift */; };
+		671A558E264B64C700E4EEFB /* introviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671A558D264B64C700E4EEFB /* introviewcontroller.swift */; };
 		67B9E4F92637987500A04997 /* Songs in Resources */ = {isa = PBXBuildFile; fileRef = 67B9E4F82637987500A04997 /* Songs */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +56,9 @@
 		670A4841263661A500358DB3 /* testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		670A4845263661A500358DB3 /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		670A4847263661A500358DB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		671A5585264A8C0F00E4EEFB /* normal-hitnormal.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "normal-hitnormal.wav"; sourceTree = "<group>"; };
+		671A5587264B633F00E4EEFB /* intro.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = intro.sks; sourceTree = "<group>"; };
+		671A5589264B63C300E4EEFB /* intro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intro.swift; sourceTree = "<group>"; };
+		671A558D264B64C700E4EEFB /* introviewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introviewcontroller.swift; sourceTree = "<group>"; };
 		67B9E4F82637987500A04997 /* Songs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Songs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +110,6 @@
 		670A4820263661A200358DB3 /* test */ = {
 			isa = PBXGroup;
 			children = (
-				671A5585264A8C0F00E4EEFB /* normal-hitnormal.wav */,
 				67B9E4F82637987500A04997 /* Songs */,
 				670A4821263661A200358DB3 /* AppDelegate.swift */,
 				670A4823263661A200358DB3 /* GameScene.sks */,
@@ -115,6 +118,9 @@
 				670A4829263661A200358DB3 /* ViewController.swift */,
 				670A482B263661A400358DB3 /* Assets.xcassets */,
 				670A482D263661A400358DB3 /* Main.storyboard */,
+				671A558D264B64C700E4EEFB /* introviewcontroller.swift */,
+				671A5587264B633F00E4EEFB /* intro.sks */,
+				671A5589264B63C300E4EEFB /* intro.swift */,
 				670A4830263661A500358DB3 /* Info.plist */,
 				670A4831263661A500358DB3 /* test.entitlements */,
 			);
@@ -244,8 +250,8 @@
 			files = (
 				670A4824263661A200358DB3 /* GameScene.sks in Resources */,
 				67B9E4F92637987500A04997 /* Songs in Resources */,
-				671A5586264A8C0F00E4EEFB /* normal-hitnormal.wav in Resources */,
 				670A482C263661A400358DB3 /* Assets.xcassets in Resources */,
+				671A5588264B633F00E4EEFB /* intro.sks in Resources */,
 				670A4826263661A200358DB3 /* Actions.sks in Resources */,
 				670A482F263661A400358DB3 /* Main.storyboard in Resources */,
 			);
@@ -274,6 +280,8 @@
 			files = (
 				670A482A263661A200358DB3 /* ViewController.swift in Sources */,
 				670A4828263661A200358DB3 /* GameScene.swift in Sources */,
+				671A558A264B63C300E4EEFB /* intro.swift in Sources */,
+				671A558E264B64C700E4EEFB /* introviewcontroller.swift in Sources */,
 				670A4822263661A200358DB3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
