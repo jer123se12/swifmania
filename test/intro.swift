@@ -133,7 +133,7 @@ class intro: SKScene  {
             let odir=songdir.appendingPathComponent(listOfSongs.0[songselected[0]])
             do{
                 audioPlayer = try AVAudioPlayer(contentsOf: odir.appendingPathComponent(getsongfile(filename: osufile.path)))
-                //audioPlayer.play()
+                audioPlayer.play()
             }catch{
                 
             }
@@ -167,6 +167,7 @@ class intro: SKScene  {
         let keycode = event.keyCode
         print(songselected[0],totalSongs.0)
         if keycode==125{//up
+            
             if !inVer{
             songselected[0]+=1
             songselected[1]=0
@@ -180,7 +181,9 @@ class intro: SKScene  {
                     songselected[1]=0
                 }
             }
+            reload()
         }else if keycode==126{//down
+            
             if !inVer{
             songselected[0]-=1
             songselected[1]=0
@@ -193,14 +196,17 @@ class intro: SKScene  {
                     songselected[1]=totalSongs.1[songselected[0]]-1
                 }
             }
+            reload()
         }else if event.characters=="\r"{
             if !inVer{
                 inVer=true
             }else{
                 //go to play
+                
                 ud.set(songselected, forKey: "selected")
                 let scene = SKScene(fileNamed: "GameScene")!
                 let transition = SKTransition.fade(with: NSColor.black, duration: 1)
+                self.removeAllChildren()
                 self.view?.presentScene(scene, transition: transition)
                 
             }

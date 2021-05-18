@@ -479,6 +479,9 @@ class GameScene: SKScene  {
     midwid=self.size.width/2
     midhei=self.size.height/2
     juy=CGFloat((-200/600)*hei)
+    if amt>7{
+      OSErr("too many keys or file got problem")
+    }
     keys=allkeys[amt]
     startupdating=true
     light=[]
@@ -520,6 +523,9 @@ class GameScene: SKScene  {
     midwid=self.size.width/2
     midhei=self.size.height/2
     juy=CGFloat((-200/600)*hei)
+    for a in light{
+      a.removeFromParent()
+    }
     light=[]
     
     if startupdating{
