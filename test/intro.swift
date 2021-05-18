@@ -171,7 +171,7 @@ class intro: SKScene  {
             if !inVer{
             songselected[0]+=1
             songselected[1]=0
-            if songselected[0]>=totalSongs.0{
+            if songselected[0]>totalSongs.0{
                 songselected[0]=0
                 
             }}else{
@@ -187,12 +187,12 @@ class intro: SKScene  {
             if !inVer{
             songselected[0]-=1
             songselected[1]=0
-            if songselected[0]<=0{
+            if songselected[0]<0{
                 songselected[0]=totalSongs.0-1
             }}else{
                 songselected[1]-=1
                 
-                if songselected[1]<=0{
+                if songselected[1]<0{
                     songselected[1]=totalSongs.1[songselected[0]]-1
                 }
             }

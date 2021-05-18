@@ -86,7 +86,7 @@ class GameScene: SKScene  {
         }
       }
     }
-    
+    print(temp)
     return temp.count
   }
   func getsong(filename:String,amoky:Int)->([[String]], [[[String]]]){
